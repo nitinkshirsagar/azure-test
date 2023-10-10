@@ -1,4 +1,5 @@
 name: "Tag on Pull Request merge"
+run-name: ${{ github.actor }} is testing out GitHub Actions
 on:
   push:
     branches:
