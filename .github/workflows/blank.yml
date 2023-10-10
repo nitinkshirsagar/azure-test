@@ -1,3 +1,4 @@
+name: "Tag on Pull Request merge"
 on:
   push:
     branches:
