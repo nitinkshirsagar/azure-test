@@ -1,11 +1,14 @@
 name: "Tag on Pull Request merge"
-run-name: ${{ github.actor }} is testing out GitHub Actions
+
 on:
-  push:
+  pull_request:
+    types: 
+      - closed
     branches:
       - master
 jobs:
-  release:
+  tag-on-pr-merge:
+    name: Tag on Pull Request merge
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true
     steps:
