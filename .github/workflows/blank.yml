@@ -1,11 +1,14 @@
+name: "Tag on Pull Request merge"
+
 on:
   pull_request:
-    types:
-      - merged
+    types: 
+      - closed
     branches:
       - master
 jobs:
-  build:
+  tag-on-pr-merge:
+    name: Tag on Pull Request merge
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true
     steps:
