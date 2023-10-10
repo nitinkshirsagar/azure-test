@@ -17,8 +17,7 @@ jobs:
         uses: David-Lor/action-tag-on-pr-merge@main
         with:
           push-tag: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: print tag
         run:  echo "${{ steps.tag-on-pr-merge.outputs.tag }}"
       - name: Trigger Release workflow
