@@ -25,7 +25,7 @@ jobs:
         if: steps.tag-on-pr-merge.outputs.tag
         with:          
           repository: nitinkshirsagar/azure-test  # Change with your repository
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           event-type: from_tag
           client-payload: |-
             {
