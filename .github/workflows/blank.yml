@@ -1,11 +1,13 @@
 on:
-  push:
+  pull_request:
+    types:
+      - merged
     branches:
       - master
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged
+    if: github.event.pull_request.merged == true
     steps:
       - uses: actions/checkout@v3
       - name: "Refresh tags"
