@@ -20,14 +20,3 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: print tag
         run:  echo "${{ steps.tag-on-pr-merge.outputs.tag }}"
-      - name: Trigger Release workflow
-        uses: peter-evans/repository-dispatch@c73dcc42429d4220d60b2b8daf3cee190a131129
-        if: steps.tag-on-pr-merge.outputs.tag
-        with:          
-          repository: nitinkshirsagar/azure-test  # Change with your repository
-          token: ${{ secrets.GITHUB_TOKEN }}
-          event-type: from_tag
-          client-payload: |-
-            {
-              "tag": "${{ steps.tag-on-pr-merge.outputs.tag }}"
-            }
