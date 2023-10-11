@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.2.2
+
+Added new script
+
 ## v1.2.0
 
 Added new script
