@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.2.0
+
+Added new script
+
 ## v1.0.6
 
 Added hello file
