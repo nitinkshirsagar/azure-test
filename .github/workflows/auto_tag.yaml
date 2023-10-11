@@ -1,4 +1,4 @@
-name: Release package
+name: Bump version
 on:
   push:
     branches:
