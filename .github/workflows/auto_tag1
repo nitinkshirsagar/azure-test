@@ -6,9 +6,9 @@ on:
     branches:
       - master
 jobs:
-  build:
-    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
+  build:    
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
     steps:
       - uses: actions/checkout@v2
       - name: Bump version and push tag
