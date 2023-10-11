@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.2.3
+
+Added new script
 
 ## v1.2.2
 
