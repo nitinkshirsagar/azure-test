@@ -1,4 +1,5 @@
 name: Bump version
+# https://github.com/mathieudutour/github-tag-action#bumping
 on:
   pull_request:
     types: 
@@ -8,7 +9,7 @@ on:
 jobs:
   build:    
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
+    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
     steps:
       - uses: actions/checkout@v2
       - name: Bump version and push tag
